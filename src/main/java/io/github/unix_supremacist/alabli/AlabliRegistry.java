@@ -19,7 +19,7 @@ public class AlabliRegistry {
     }
 
     public static void registerBlockTag(TagKey<Block> tag, ArrayList<Block> arrayList){
-        BuiltInRegistries.BLOCK.getTagOrEmpty(tag).iterator().forEachRemaining(t ->arrayList.add(t.value()));
+        Registry.BLOCK.getTagOrEmpty(tag).iterator().forEachRemaining(t ->arrayList.add(t.value()));
     }
 
     public static TagKey<Block> createBlockTag(String name){
