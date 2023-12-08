@@ -2,7 +2,6 @@ package io.github.unix_supremacist.alabli;
 
 import io.github.unix_supremacist.Alchemist;
 import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -12,12 +11,11 @@ import java.util.ArrayList;
 
 public class AlabliRegistry {
     public static void registerItem(Item item, String name){
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(Alchemist.MODID, name), item);
-        Alabli.items.add(item);
+        Registry.register(Registry.ITEM, new ResourceLocation(Alchemist.MODID, name), item);
     }
 
     public static void registerBlock(Block block, String name){
-        Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(Alchemist.MODID, name), block);
+        Registry.register(Registry.BLOCK, new ResourceLocation(Alchemist.MODID, name), block);
     }
 
     public static void registerBlockTag(TagKey<Block> tag, ArrayList<Block> arrayList){
