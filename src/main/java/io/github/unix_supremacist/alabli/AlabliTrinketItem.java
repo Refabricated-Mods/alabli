@@ -4,6 +4,6 @@ import dev.emi.trinkets.api.TrinketItem;
 
 public class AlabliTrinketItem extends TrinketItem {
     public AlabliTrinketItem(Properties settings) {
-        super(settings);
+        super(settings.tab(Alabli.tab));
     }
 }

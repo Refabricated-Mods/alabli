@@ -67,11 +67,11 @@ dependencies {
 	modImplementation("net.feltmc:felt-splash-api:1.0.0-1.19.2"){
 		exclude(group: "com.terraformersmc")
 	}
-	modImplementation "io.github.ladysnake:PlayerAbilityLib:1.7.0"
+	modImplementation "io.github.ladysnake:PlayerAbilityLib:1.6.0"
 	//required for trinkets
-	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.1.0"
-	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.1.0"
-	modImplementation "dev.emi:trinkets:3.6.0"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.0.2"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.0.2"
+	modImplementation "dev.emi:trinkets:3.4.1"
 
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
 	// These are included in the Fabric API production distribution and allow you to update your mod to the latest modules at a later more convenient time.

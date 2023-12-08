@@ -5,6 +5,6 @@ import net.minecraft.world.level.block.Block;
 
 public class AlabliBlockItem extends BlockItem {
     public AlabliBlockItem(Block block, Properties properties) {
-        super(block, properties);
+        super(block, properties.tab(Alabli.tab));
     }
 }
