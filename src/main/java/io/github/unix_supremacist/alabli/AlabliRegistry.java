@@ -23,6 +23,6 @@ public class AlabliRegistry {
     }
 
     public static TagKey<Block> createBlockTag(String name){
-        return TagKey.create(BuiltInRegistries.BLOCK.key(), new ResourceLocation(Alchemist.MODID, name));
+        return TagKey.create(Registry.BLOCK.key(), new ResourceLocation(Alchemist.MODID, name));
     }
 }
