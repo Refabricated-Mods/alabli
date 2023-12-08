@@ -1,0 +1,32 @@
+{
+	"schemaVersion": 1,
+	"id": "alabli",
+	"version": "${version}",
+	"name": "Alchemist Abstraction Lib",
+	"description": "Library to allow alchemist to work on as many minecraft versions as possible with minimal changes",
+	"authors": [
+		"unix-supremacist"
+	],
+	"contact": {
+		"homepage": "https://unix-supremacist.github.io",
+		"sources": "https://github.com/Refabricated-Mods/alabli"
+	},
+	"license": "OSL-3.0",
+	"icon": "assets/alabli/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.unix_supremacist.alabli.Alabli"
+		],
+		"client": [
+			"com.example.ExampleModClient"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.0",
+		"minecraft": ">=1.20",
+		"java": ">=17",
+		"fabric-api": "*",
+		"alchemist": "*"
+	}
+}
