@@ -55,7 +55,16 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modImplementation "io.github.unix-supremacist:Alchemist:1.1.0"
+	modImplementation ("io.github.unix-supremacist:Alchemist:1.1.0"){
+		transitive = false
+	}
+	modImplementation("net.feltmc:felt-splash-api:1.0.0-1.20.1"){
+		exclude(group: "com.terraformersmc")
+	}
+	modImplementation "io.github.ladysnake:PlayerAbilityLib:1.9.0"
+	//required for trinkets
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.3.0"
+	modRuntimeOnly "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.3.0"
 	modImplementation "dev.emi:trinkets:3.8.0"
 
 	// Uncomment the following line to enable the deprecated Fabric API modules. 
