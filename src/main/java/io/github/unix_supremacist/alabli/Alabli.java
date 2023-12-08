@@ -24,7 +24,7 @@ public class Alabli implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger(Alchemist.MODID);
 	public static ArrayList<Item> items = new ArrayList<>();
 	public static BlockBehaviour.Properties properties = FabricBlockSettings.create();
-	public static final CreativeModeTab tab = FabricItemGroup.builder()
+	public static final CreativeModeTab tab = FabricItemGroup.builder(new ResourceLocation(Alchemist.MODID, "tab"))
 			.icon(() -> new ItemStack(AlchemistItems.philosophers_stone.getItem()))
 			.title(Component.translatable("itemGroup."+Alchemist.MODID))
 			.build();
@@ -32,12 +32,11 @@ public class Alabli implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		Alabli.LOGGER.info("Welcome to the World of Alchemy!");
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, new ResourceLocation(Alchemist.MODID, "tab"), tab);
 	}
 
 	public static void initializeCreativeTab(){
 		for (Item item : items){
-			ItemGroupEvents.modifyEntriesEvent(ResourceKey.create(BuiltInRegistries.CREATIVE_MODE_TAB.key(), new ResourceLocation(Alchemist.MODID, "tab"))).register(content -> {
+			ItemGroupEvents.modifyEntriesEvent(tab).register(content -> {
 				content.accept(item);
 			});
 		}
